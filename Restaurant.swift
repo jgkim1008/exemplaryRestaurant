@@ -8,14 +8,23 @@
 import Foundation
 
 struct Restaurant: Decodable {
+    let info: Info
+
+    enum CodingKeys: String, CodingKey {
+        case info = "CrtfcUpsoInfo"
+    }
+    
+}
+
+struct Info: Decodable {
     let totalCount: Int
     let code: Code
-    let info: [Info]
+    let detail: [Detail]
     
     enum CodingKeys: String, CodingKey {
         case totalCount = "list_total_count"
         case code = "RESULT"
-        case info = "row"
+        case detail = "row"
     }
     
     struct Code: Codable {
@@ -27,7 +36,7 @@ struct Restaurant: Decodable {
         }
     }
     
-    struct Info: Decodable {
+    struct Detail: Decodable {
         let crtfcUpsoMgtSno: Int
         let upsoNm, cggCode, cggCodeNm: String
         let cobCodeNm, bizcndCodeNm, ownerNm, crtfcGbn: String
