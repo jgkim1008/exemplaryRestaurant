@@ -17,6 +17,11 @@
 		E69D61ED27F5450700C76C76 /* exemplaryRestaurantUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69D61EC27F5450700C76C76 /* exemplaryRestaurantUITests.swift */; };
 		E69D61EF27F5450700C76C76 /* exemplaryRestaurantUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69D61EE27F5450700C76C76 /* exemplaryRestaurantUITestsLaunchTests.swift */; };
 		E69D61FD27F548C000C76C76 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69D61FC27F548C000C76C76 /* Restaurant.swift */; };
+		E69D620327F5544300C76C76 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = E69D620227F5544300C76C76 /* RxBlocking */; };
+		E69D620527F5544300C76C76 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = E69D620427F5544300C76C76 /* RxCocoa */; };
+		E69D620727F5544300C76C76 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = E69D620627F5544300C76C76 /* RxRelay */; };
+		E69D620927F5544300C76C76 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E69D620827F5544300C76C76 /* RxSwift */; };
+		E69D621827F5BA2C00C76C76 /* URITemplate in Frameworks */ = {isa = PBXBuildFile; productRef = E69D621727F5BA2C00C76C76 /* URITemplate */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +63,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E69D620727F5544300C76C76 /* RxRelay in Frameworks */,
+				E69D620527F5544300C76C76 /* RxCocoa in Frameworks */,
+				E69D620927F5544300C76C76 /* RxSwift in Frameworks */,
+				E69D620327F5544300C76C76 /* RxBlocking in Frameworks */,
+				E69D621827F5BA2C00C76C76 /* URITemplate in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +164,13 @@
 			dependencies = (
 			);
 			name = exemplaryRestaurant;
+			packageProductDependencies = (
+				E69D620227F5544300C76C76 /* RxBlocking */,
+				E69D620427F5544300C76C76 /* RxCocoa */,
+				E69D620627F5544300C76C76 /* RxRelay */,
+				E69D620827F5544300C76C76 /* RxSwift */,
+				E69D621727F5BA2C00C76C76 /* URITemplate */,
+			);
 			productName = exemplaryRestaurant;
 			productReference = E69D61C827F5450500C76C76 /* exemplaryRestaurant.app */;
 			productType = "com.apple.product-type.application";
@@ -226,6 +243,10 @@
 				Base,
 			);
 			mainGroup = E69D61BF27F5450500C76C76;
+			packageReferences = (
+				E69D620127F5544300C76C76 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				E69D621627F5BA2C00C76C76 /* XCRemoteSwiftPackageReference "URITemplate" */,
+			);
 			productRefGroup = E69D61C927F5450500C76C76 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -610,6 +631,53 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E69D620127F5544300C76C76 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		E69D621627F5BA2C00C76C76 /* XCRemoteSwiftPackageReference "URITemplate" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kylef/URITemplate.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E69D620227F5544300C76C76 /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E69D620127F5544300C76C76 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		E69D620427F5544300C76C76 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E69D620127F5544300C76C76 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		E69D620627F5544300C76C76 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E69D620127F5544300C76C76 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		E69D620827F5544300C76C76 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E69D620127F5544300C76C76 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		E69D621727F5BA2C00C76C76 /* URITemplate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E69D621627F5BA2C00C76C76 /* XCRemoteSwiftPackageReference "URITemplate" */;
+			productName = URITemplate;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E69D61C027F5450500C76C76 /* Project object */;
 }
