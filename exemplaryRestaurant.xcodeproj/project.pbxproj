@@ -27,6 +27,8 @@
 		E69D621127F58B4B00C76C76 /* NetworkModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69D621027F58B4B00C76C76 /* NetworkModule.swift */; };
 		E69D621527F5B03C00C76C76 /* APIKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = E69D621427F5B03C00C76C76 /* APIKey.plist */; };
 		E69D621827F5BA2C00C76C76 /* URITemplate in Frameworks */ = {isa = PBXBuildFile; productRef = E69D621727F5BA2C00C76C76 /* URITemplate */; };
+		E69D621B27F6A38400C76C76 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69D621A27F6A38400C76C76 /* LocationService.swift */; };
+		E69D621E27F6C0F200C76C76 /* RxCoreLocation in Frameworks */ = {isa = PBXBuildFile; productRef = E69D621D27F6C0F200C76C76 /* RxCoreLocation */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,7 @@
 		E69D620E27F58B2500C76C76 /* URLResqusetBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLResqusetBuilder.swift; sourceTree = "<group>"; };
 		E69D621027F58B4B00C76C76 /* NetworkModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModule.swift; sourceTree = "<group>"; };
 		E69D621427F5B03C00C76C76 /* APIKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKey.plist; sourceTree = "<group>"; };
+		E69D621A27F6A38400C76C76 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +78,7 @@
 			files = (
 				E69D620727F5544300C76C76 /* RxRelay in Frameworks */,
 				E69D620527F5544300C76C76 /* RxCocoa in Frameworks */,
+				E69D621E27F6C0F200C76C76 /* RxCoreLocation in Frameworks */,
 				E69D620927F5544300C76C76 /* RxSwift in Frameworks */,
 				E69D620327F5544300C76C76 /* RxBlocking in Frameworks */,
 				E69D621827F5BA2C00C76C76 /* URITemplate in Frameworks */,
@@ -140,7 +144,8 @@
 			children = (
 				E69D61E227F5450700C76C76 /* exemplaryRestaurantTests.swift */,
 			);
-			path = exemplaryRestaurantTests;
+			name = exemplaryRestaurantTests;
+			path = exemplaryRestaurant/exemplaryRestaurantTests;
 			sourceTree = "<group>";
 		};
 		E69D61EB27F5450700C76C76 /* exemplaryRestaurantUITests */ = {
@@ -149,7 +154,8 @@
 				E69D61EC27F5450700C76C76 /* exemplaryRestaurantUITests.swift */,
 				E69D61EE27F5450700C76C76 /* exemplaryRestaurantUITestsLaunchTests.swift */,
 			);
-			path = exemplaryRestaurantUITests;
+			name = exemplaryRestaurantUITests;
+			path = exemplaryRestaurant/exemplaryRestaurantUITests;
 			sourceTree = "<group>";
 		};
 		E69D61FB27F5482700C76C76 /* Model */ = {
@@ -163,12 +169,21 @@
 		E69D61FE27F5517C00C76C76 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				E69D620A27F58B0200C76C76 /* Route.swift */,
-				E69D620E27F58B2500C76C76 /* URLResqusetBuilder.swift */,
+				E69D621927F6A24F00C76C76 /* NetworkLayer */,
 				E69D61FF27F553A600C76C76 /* UseCase.swift */,
-				E69D621027F58B4B00C76C76 /* NetworkModule.swift */,
+				E69D621A27F6A38400C76C76 /* LocationService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		E69D621927F6A24F00C76C76 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				E69D621027F58B4B00C76C76 /* NetworkModule.swift */,
+				E69D620E27F58B2500C76C76 /* URLResqusetBuilder.swift */,
+				E69D620A27F58B0200C76C76 /* Route.swift */,
+			);
+			path = NetworkLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +208,7 @@
 				E69D620627F5544300C76C76 /* RxRelay */,
 				E69D620827F5544300C76C76 /* RxSwift */,
 				E69D621727F5BA2C00C76C76 /* URITemplate */,
+				E69D621D27F6C0F200C76C76 /* RxCoreLocation */,
 			);
 			productName = exemplaryRestaurant;
 			productReference = E69D61C827F5450500C76C76 /* exemplaryRestaurant.app */;
@@ -269,6 +285,7 @@
 			packageReferences = (
 				E69D620127F5544300C76C76 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				E69D621627F5BA2C00C76C76 /* XCRemoteSwiftPackageReference "URITemplate" */,
+				E69D621C27F6C0F200C76C76 /* XCRemoteSwiftPackageReference "RxCoreLocation" */,
 			);
 			productRefGroup = E69D61C927F5450500C76C76 /* Products */;
 			projectDirPath = "";
@@ -321,6 +338,7 @@
 				E69D620B27F58B0200C76C76 /* Route.swift in Sources */,
 				E69D61CC27F5450500C76C76 /* AppDelegate.swift in Sources */,
 				E69D61CE27F5450500C76C76 /* SceneDelegate.swift in Sources */,
+				E69D621B27F6A38400C76C76 /* LocationService.swift in Sources */,
 				E69D621127F58B4B00C76C76 /* NetworkModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -677,6 +695,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		E69D621C27F6C0F200C76C76 /* XCRemoteSwiftPackageReference "RxCoreLocation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxCoreLocation";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -704,6 +730,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E69D621627F5BA2C00C76C76 /* XCRemoteSwiftPackageReference "URITemplate" */;
 			productName = URITemplate;
+		};
+		E69D621D27F6C0F200C76C76 /* RxCoreLocation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E69D621C27F6C0F200C76C76 /* XCRemoteSwiftPackageReference "RxCoreLocation" */;
+			productName = RxCoreLocation;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
