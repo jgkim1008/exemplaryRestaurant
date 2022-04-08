@@ -28,6 +28,7 @@
 		E69D621827F5BA2C00C76C76 /* URITemplate in Frameworks */ = {isa = PBXBuildFile; productRef = E69D621727F5BA2C00C76C76 /* URITemplate */; };
 		E69D621B27F6A38400C76C76 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69D621A27F6A38400C76C76 /* LocationService.swift */; };
 		E69D621E27F6C0F200C76C76 /* RxCoreLocation in Frameworks */ = {isa = PBXBuildFile; productRef = E69D621D27F6C0F200C76C76 /* RxCoreLocation */; };
+		E6B0BB0C27FCB3B700A91947 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B0BB0B27FCB3B700A91947 /* MapViewModel.swift */; };
 		E6B0BB0E27FCB6BF00A91947 /* RestaurantMKAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B0BB0D27FCB6BF00A91947 /* RestaurantMKAnnotation.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		E69D621027F58B4B00C76C76 /* NetworkModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModule.swift; sourceTree = "<group>"; };
 		E69D621427F5B03C00C76C76 /* APIKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKey.plist; sourceTree = "<group>"; };
 		E69D621A27F6A38400C76C76 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		E6B0BB0B27FCB3B700A91947 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		E6B0BB0D27FCB6BF00A91947 /* RestaurantMKAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMKAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,9 +129,10 @@
 			children = (
 				E69D61FE27F5517C00C76C76 /* Services */,
 				E69D61FB27F5482700C76C76 /* Model */,
+				E6B0BB0A27FCB37E00A91947 /* ViewModel */,
+				E69E480628003247000A6E23 /* View */,
 				E69D61CB27F5450500C76C76 /* AppDelegate.swift */,
 				E69D61CD27F5450500C76C76 /* SceneDelegate.swift */,
-				E69D61CF27F5450500C76C76 /* MainViewController.swift */,
 				E69D61D427F5450700C76C76 /* Assets.xcassets */,
 				E69D61D627F5450700C76C76 /* LaunchScreen.storyboard */,
 				E69D61D927F5450700C76C76 /* Info.plist */,
@@ -184,6 +187,22 @@
 				E69D620A27F58B0200C76C76 /* Route.swift */,
 			);
 			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		E69E480628003247000A6E23 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E69D61CF27F5450500C76C76 /* MainViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E6B0BB0A27FCB37E00A91947 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E6B0BB0B27FCB3B700A91947 /* MapViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E69D620027F553A600C76C76 /* UseCase.swift in Sources */,
+				E6B0BB0C27FCB3B700A91947 /* MapViewModel.swift in Sources */,
 				E69D620F27F58B2500C76C76 /* URLResqusetBuilder.swift in Sources */,
 				E69D61FD27F548C000C76C76 /* Restaurant.swift in Sources */,
 				E69D61D027F5450500C76C76 /* MainViewController.swift in Sources */,
