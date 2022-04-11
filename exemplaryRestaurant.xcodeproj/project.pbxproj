@@ -29,6 +29,7 @@
 		E69D621B27F6A38400C76C76 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69D621A27F6A38400C76C76 /* LocationService.swift */; };
 		E69D621E27F6C0F200C76C76 /* RxCoreLocation in Frameworks */ = {isa = PBXBuildFile; productRef = E69D621D27F6C0F200C76C76 /* RxCoreLocation */; };
 		E69DD84F2802078900E5AD0A /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69DD84E2802078900E5AD0A /* MainCoordinator.swift */; };
+		E6A6D69128042CCB006A9E7B /* RxMKMapView in Frameworks */ = {isa = PBXBuildFile; productRef = E6A6D69028042CCB006A9E7B /* RxMKMapView */; };
 		E6B0BB0C27FCB3B700A91947 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B0BB0B27FCB3B700A91947 /* MapViewModel.swift */; };
 		E6B0BB0E27FCB6BF00A91947 /* RestaurantMKAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B0BB0D27FCB6BF00A91947 /* RestaurantMKAnnotation.swift */; };
 /* End PBXBuildFile section */
@@ -80,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6A6D69128042CCB006A9E7B /* RxMKMapView in Frameworks */,
 				E69D620727F5544300C76C76 /* RxRelay in Frameworks */,
 				E69D620527F5544300C76C76 /* RxCocoa in Frameworks */,
 				E69D621E27F6C0F200C76C76 /* RxCoreLocation in Frameworks */,
@@ -239,6 +241,7 @@
 				E69D620827F5544300C76C76 /* RxSwift */,
 				E69D621727F5BA2C00C76C76 /* URITemplate */,
 				E69D621D27F6C0F200C76C76 /* RxCoreLocation */,
+				E6A6D69028042CCB006A9E7B /* RxMKMapView */,
 			);
 			productName = exemplaryRestaurant;
 			productReference = E69D61C827F5450500C76C76 /* exemplaryRestaurant.app */;
@@ -316,6 +319,7 @@
 				E69D620127F5544300C76C76 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				E69D621627F5BA2C00C76C76 /* XCRemoteSwiftPackageReference "URITemplate" */,
 				E69D621C27F6C0F200C76C76 /* XCRemoteSwiftPackageReference "RxCoreLocation" */,
+				E6A6D68F28042CCB006A9E7B /* XCRemoteSwiftPackageReference "RxMKMapView" */,
 			);
 			productRefGroup = E69D61C927F5450500C76C76 /* Products */;
 			projectDirPath = "";
@@ -727,6 +731,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		E6A6D68F28042CCB006A9E7B /* XCRemoteSwiftPackageReference "RxMKMapView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxMKMapView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -759,6 +771,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E69D621C27F6C0F200C76C76 /* XCRemoteSwiftPackageReference "RxCoreLocation" */;
 			productName = RxCoreLocation;
+		};
+		E6A6D69028042CCB006A9E7B /* RxMKMapView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E6A6D68F28042CCB006A9E7B /* XCRemoteSwiftPackageReference "RxMKMapView" */;
+			productName = RxMKMapView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

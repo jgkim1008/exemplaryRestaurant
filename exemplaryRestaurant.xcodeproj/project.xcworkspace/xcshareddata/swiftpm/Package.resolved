@@ -20,6 +20,15 @@
         }
       },
       {
+        "package": "RxMKMapView",
+        "repositoryURL": "https://github.com/RxSwiftCommunity/RxMKMapView",
+        "state": {
+          "branch": null,
+          "revision": "b5360def2932139725990eddfc870577844124b4",
+          "version": "6.0.0"
+        }
+      },
+      {
         "package": "RxSwift",
         "repositoryURL": "https://github.com/ReactiveX/RxSwift",
         "state": {
