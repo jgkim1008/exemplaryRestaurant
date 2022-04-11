@@ -23,7 +23,4 @@ final class RestaurantMKAnnotation: NSObject, MKAnnotation {
         self.type = type
         self.coordinate = coordinate
     }
-    
- 
-    
 }

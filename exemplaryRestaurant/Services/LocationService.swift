@@ -18,7 +18,7 @@ final class LocationService: NSObject, LocationTrackable {
         return manager
     }()
     
-    private var location = BehaviorSubject<CLLocationCoordinate2D>(value: .init(latitude: 37.5283169, longitude: 126.9294254))
+    private var location = BehaviorSubject<CLLocationCoordinate2D>(value: .init(latitude: 37.496710550965, longitude: 126.92542846895))
     private let disposeBag = DisposeBag()
     
     override init() {
