@@ -53,7 +53,8 @@ final class MapViewModel {
                     let locationName = $0.rdnCodeNm
                     let type = $0.cobCodeNm
                     let subtitle = $0.foodMenu
-                    return RestaurantMKAnnotation(title: title, subtitle: subtitle, locationName: locationName, type: type, coordinate: coordinate)
+                    let phoneNumber = $0.telNo
+                    return RestaurantMKAnnotation(title: title, subtitle: subtitle, locationName: locationName, type: type, coordinate: coordinate, phoneNumber: phoneNumber)
                 }
             }
 
@@ -65,11 +66,12 @@ final class MapViewModel {
                     let locationName = $0.rdnCodeNm
                     let type = $0.cobCodeNm
                     let subtitle = $0.foodMenu
-                    return RestaurantMKAnnotation(title: title, subtitle: subtitle, locationName: locationName, type: type, coordinate: coordinate)
+                    let phoneNumber = $0.telNo
+                    return RestaurantMKAnnotation(title: title, subtitle: subtitle, locationName: locationName, type: type, coordinate: coordinate, phoneNumber: phoneNumber)
                 }
             }
         
-        let megeData = Observable.zip(firstData, secondData, resultSelector: { (first, second) in
+        _ = Observable.zip(firstData, secondData, resultSelector: { (first, second) in
             return first + second
         })
         .bind(to: restaurantObservable)

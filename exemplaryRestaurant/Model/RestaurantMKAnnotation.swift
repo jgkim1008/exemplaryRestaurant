@@ -13,14 +13,16 @@ final class RestaurantMKAnnotation: NSObject, MKAnnotation {
     let subtitle: String?
     let locationName: String?
     let type: String?
-    var coordinate: CLLocationCoordinate2D
+    let coordinate: CLLocationCoordinate2D
+    let phoneNumber: String?
     
     
-    init(title: String?, subtitle: String?, locationName: String?, type: String?, coordinate: CLLocationCoordinate2D) {
+    init(title: String?, subtitle: String?, locationName: String?, type: String?, coordinate: CLLocationCoordinate2D, phoneNumber: String?) {
         self.title = title
         self.subtitle = subtitle
         self.locationName = locationName
         self.type = type
         self.coordinate = coordinate
+        self.phoneNumber = phoneNumber
     }
 }
