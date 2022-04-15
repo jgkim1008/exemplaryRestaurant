@@ -13,9 +13,18 @@ import RxMKMapView
 
 class MainViewController: UIViewController {
     private var mapView = MKMapView()
-    let viewModel = MapViewModel()
+    let viewModel: MapViewModel
     let viewDisposeBag = DisposeBag()
     weak var coordinator: MainCoordinator?
+    
+    init(viewModel: MapViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,8 +51,10 @@ class MainViewController: UIViewController {
     
     private func selectAnnotationView() {
         mapView.rx.didSelectAnnotationView
-            .subscribe(onNext: { _ in
-                print("터치됨")
+            .map {
+                $0.annotation
+            }.subscribe(onNext: { data in
+                self.coordinator?.pushDetailVC(data)
             })
     }
     
