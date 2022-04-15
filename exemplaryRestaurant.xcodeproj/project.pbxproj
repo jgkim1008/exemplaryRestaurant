@@ -31,6 +31,7 @@
 		E69DD84F2802078900E5AD0A /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69DD84E2802078900E5AD0A /* MainCoordinator.swift */; };
 		E6A6D69128042CCB006A9E7B /* RxMKMapView in Frameworks */ = {isa = PBXBuildFile; productRef = E6A6D69028042CCB006A9E7B /* RxMKMapView */; };
 		E6A6D6932804A16F006A9E7B /* DetailViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A6D6922804A16F006A9E7B /* DetailViewCoordinator.swift */; };
+		E6A6D6972804B565006A9E7B /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A6D6962804B565006A9E7B /* DetailViewModel.swift */; };
 		E6A6D69A28059898006A9E7B /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A6D69928059898006A9E7B /* UILabel+Extension.swift */; };
 		E6A6D69C280598A3006A9E7B /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A6D69B280598A3006A9E7B /* UIStackView+Extension.swift */; };
 		E6B0BB0C27FCB3B700A91947 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B0BB0B27FCB3B700A91947 /* MapViewModel.swift */; };
@@ -76,6 +77,7 @@
 		E69D621A27F6A38400C76C76 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		E69DD84E2802078900E5AD0A /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		E6A6D6922804A16F006A9E7B /* DetailViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewCoordinator.swift; sourceTree = "<group>"; };
+		E6A6D6962804B565006A9E7B /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		E6A6D69928059898006A9E7B /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		E6A6D69B280598A3006A9E7B /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		E6B0BB0B27FCB3B700A91947 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				E6B0BB0B27FCB3B700A91947 /* MapViewModel.swift */,
+				E6A6D6962804B565006A9E7B /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				E6B0BB0E27FCB6BF00A91947 /* RestaurantMKAnnotation.swift in Sources */,
 				E69D621B27F6A38400C76C76 /* LocationService.swift in Sources */,
 				E69D621127F58B4B00C76C76 /* NetworkModule.swift in Sources */,
+				E6A6D6972804B565006A9E7B /* DetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
