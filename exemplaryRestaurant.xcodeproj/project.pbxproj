@@ -31,6 +31,8 @@
 		E69DD84F2802078900E5AD0A /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69DD84E2802078900E5AD0A /* MainCoordinator.swift */; };
 		E6A6D69128042CCB006A9E7B /* RxMKMapView in Frameworks */ = {isa = PBXBuildFile; productRef = E6A6D69028042CCB006A9E7B /* RxMKMapView */; };
 		E6A6D6932804A16F006A9E7B /* DetailViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A6D6922804A16F006A9E7B /* DetailViewCoordinator.swift */; };
+		E6A6D69A28059898006A9E7B /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A6D69928059898006A9E7B /* UILabel+Extension.swift */; };
+		E6A6D69C280598A3006A9E7B /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A6D69B280598A3006A9E7B /* UIStackView+Extension.swift */; };
 		E6B0BB0C27FCB3B700A91947 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B0BB0B27FCB3B700A91947 /* MapViewModel.swift */; };
 		E6B0BB0E27FCB6BF00A91947 /* RestaurantMKAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B0BB0D27FCB6BF00A91947 /* RestaurantMKAnnotation.swift */; };
 /* End PBXBuildFile section */
@@ -74,6 +76,8 @@
 		E69D621A27F6A38400C76C76 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		E69DD84E2802078900E5AD0A /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		E6A6D6922804A16F006A9E7B /* DetailViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewCoordinator.swift; sourceTree = "<group>"; };
+		E6A6D69928059898006A9E7B /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		E6A6D69B280598A3006A9E7B /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		E6B0BB0B27FCB3B700A91947 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		E6B0BB0D27FCB6BF00A91947 /* RestaurantMKAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMKAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +137,7 @@
 		E69D61CA27F5450500C76C76 /* exemplaryRestaurant */ = {
 			isa = PBXGroup;
 			children = (
+				E6A6D69828059884006A9E7B /* Extension */,
 				E69D61FE27F5517C00C76C76 /* Services */,
 				E69D61FB27F5482700C76C76 /* Model */,
 				E6B0BB0A27FCB37E00A91947 /* ViewModel */,
@@ -211,6 +216,15 @@
 				E6A6D6922804A16F006A9E7B /* DetailViewCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		E6A6D69828059884006A9E7B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E6A6D69928059898006A9E7B /* UILabel+Extension.swift */,
+				E6A6D69B280598A3006A9E7B /* UIStackView+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		E6B0BB0A27FCB37E00A91947 /* ViewModel */ = {
@@ -374,7 +388,9 @@
 				E69D61FD27F548C000C76C76 /* Restaurant.swift in Sources */,
 				E69D61D027F5450500C76C76 /* MainViewController.swift in Sources */,
 				E69D620B27F58B0200C76C76 /* Route.swift in Sources */,
+				E6A6D69C280598A3006A9E7B /* UIStackView+Extension.swift in Sources */,
 				E69D61CC27F5450500C76C76 /* AppDelegate.swift in Sources */,
+				E6A6D69A28059898006A9E7B /* UILabel+Extension.swift in Sources */,
 				E69D61CE27F5450500C76C76 /* SceneDelegate.swift in Sources */,
 				E69DD84F2802078900E5AD0A /* MainCoordinator.swift in Sources */,
 				E6B0BB0E27FCB6BF00A91947 /* RestaurantMKAnnotation.swift in Sources */,
