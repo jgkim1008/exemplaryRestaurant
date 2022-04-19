@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import MapKit
 
-struct Restaurant: Decodable {
+struct RestaurantResponseDTO: Decodable {
     let info: Info
 
     enum CodingKeys: String, CodingKey {
@@ -77,6 +78,14 @@ struct Info: Decodable {
             case foodMenu = "FOOD_MENU"
             case gntNo = "GNT_NO"
             case crtfcYn = "CRTFC_YN"
+        }
+    }
+}
+
+extension RestaurantResponseDTO {
+    func toDomain(_ restaurant: RestaurantResponseDTO) -> [RestaurantMKAnnotation] {
+        restaurant.info.detail.map {
+            return .init(title: $0.upsoNm, subtitle: $0.foodMenu, locationName: $0.rdnCodeNm, type: $0.cobCodeNm, coordinate: CLLocationCoordinate2D(latitude: Double($0.latitude) ?? .zero, longitude: Double($0.longitude) ?? .zero), phoneNumber: $0.telNo)
         }
     }
 }
