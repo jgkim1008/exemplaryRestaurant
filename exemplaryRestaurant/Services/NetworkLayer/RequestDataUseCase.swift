@@ -8,8 +8,19 @@
 import Foundation
 import RxSwift
 
-class NetworkModule: DataRequsetable {
-    func download<T: Decodable>(url: URL) -> Observable<T> {
+protocol RequestDataUseCase {
+    func download<T: Decodable>(with route: Route, start: String, end: String)-> Observable<T>
+}
+
+final class DefaultRequestDataUseCase: RequestDataUseCase {
+    private let generateURLUseCase: GenerateURLUseCase
+
+    init(generateURLUseCase: GenerateURLUseCase = DefaultGenerateURLUseCase()) {
+        self.generateURLUseCase = generateURLUseCase
+    }
+    
+    func download<T: Decodable>(with route: Route, start: String, end: String) -> Observable<T> {
+        let url = generateURLUseCase.makeURL(route: route, start: start, end: end)
         return Observable.create { emitter in
             let task = URLSession.shared.dataTask(with: url) { data, response, error in
                 if let error = error {

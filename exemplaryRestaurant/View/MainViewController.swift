@@ -13,11 +13,10 @@ import RxMKMapView
 
 class MainViewController: UIViewController {
     private var mapView = MKMapView()
-    let viewModel: MapViewModel
-    let viewDisposeBag = DisposeBag()
-    weak var coordinator: MainCoordinator?
+    private let viewModel: MapViewModel
+    private let viewDisposeBag = DisposeBag()
     
-    init(viewModel: MapViewModel) {
+    init(viewModel: DefaultMapViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -53,8 +52,8 @@ class MainViewController: UIViewController {
         mapView.rx.didSelectAnnotationView
             .map {
                 $0.annotation
-            }.subscribe(onNext: { data in
-                self.coordinator?.pushDetailVC(data)
+            }.subscribe(onNext: { [weak self] data in
+                self?.viewModel.didSelect(data)
             })
     }
     

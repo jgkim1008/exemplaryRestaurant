@@ -24,18 +24,18 @@ final class MainCoordinator: Coordinator {
     }
     
     func start() {
-        let mapViewModel = MapViewModel()
+        let mapViewModel = DefaultMapViewModel()
         let mainViewController = MainViewController(viewModel: mapViewModel)
-        mainViewController.coordinator = self
+        mapViewModel.coordinator = self
         navigationConrtoller.pushViewController(mainViewController, animated: true)
+        
     }
     
     func pushDetailVC(_ restaurant: MKAnnotation?) {
         guard let restaurant = restaurant else {
             return
         }
-        let detailViewModel = DetailViewModel(restaurant: restaurant)
-        let detailCoordinator = DetailViewCoordinator(navigationController: navigationConrtoller, viewModel: detailViewModel)
+        let detailCoordinator = DetailViewCoordinator(navigationController: navigationConrtoller, restaurant: restaurant)
         detailCoordinator.parentCoordinator = self
         childCoordinators.append(detailCoordinator)
         detailCoordinator.start()

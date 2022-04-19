@@ -6,21 +6,23 @@
 //
 
 import UIKit
+import MapKit
 
 final class DetailViewCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     var navigationConrtoller: UINavigationController
     weak var parentCoordinator: MainCoordinator?
-    var viewModel: DetailViewModel
+    private var detailViewModel: DetailViewModel
     
-    init(navigationController: UINavigationController, viewModel: DetailViewModel) {
+    init(navigationController: UINavigationController, restaurant: MKAnnotation) {
         self.navigationConrtoller = navigationController
-        self.viewModel = viewModel
+        self.detailViewModel = DefaultDetailViewModel(restaurant: restaurant)
     }
     
     func start() {
-        let detailViewController = DetailViewController(viewModel: viewModel)
-        detailViewController.coordinator = self
+        let detailViewController = DetailViewController(viewModel: detailViewModel)
+        let defaultDetailViewModel = detailViewModel as? DefaultDetailViewModel
+        defaultDetailViewModel?.coordinator = self
         if let sheet = detailViewController.sheetPresentationController {
             sheet.detents = [.medium()]
             sheet.selectedDetentIdentifier = .medium

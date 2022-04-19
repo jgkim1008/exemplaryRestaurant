@@ -8,7 +8,11 @@
 import Foundation
 import URITemplate
 
-struct URLRequsetBuilder: URLBuildable {
+protocol GenerateURLUseCase {
+    func makeURL(route: Route, start: String, end: String) -> URL
+}
+
+struct DefaultGenerateURLUseCase: GenerateURLUseCase {
     func makeURL(route: Route, start: String, end: String) -> URL {
         let apikey = route.apiKey
         let template = URITemplate(template: "\(route.scheme)\(route.baseURL)\(apikey)\(route.path)/{start}/{end}")

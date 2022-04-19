@@ -10,7 +10,13 @@ import RxSwift
 import RxCoreLocation
 import CoreLocation
 
-final class LocationService: NSObject, LocationTrackable {
+protocol LocationUseCase {
+    func requestPermission() -> Observable<CLAuthorizationStatus>
+    func requestLocation() -> BehaviorSubject<CLLocationCoordinate2D>
+}
+
+
+final class DefaultLocationUseCase: NSObject, LocationUseCase {
     private var locationManager: CLLocationManager = {
         let manager = CLLocationManager()
         manager.desiredAccuracy = kCLLocationAccuracyBest
@@ -42,7 +48,7 @@ final class LocationService: NSObject, LocationTrackable {
                     weakSelf.locationManager.startUpdatingLocation()
                 })
                 .take(1)
-        } 
+        }
     }
     
     func requestLocation() -> BehaviorSubject<CLLocationCoordinate2D> {
