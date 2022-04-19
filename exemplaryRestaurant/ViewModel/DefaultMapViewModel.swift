@@ -38,7 +38,6 @@ final class DefaultMapViewModel: MapViewModel {
         self.locationUseCase = locationUseCase
         self.requestDataUseCase = requestDataUseCase
         fetchingData()
-        touchUPCurrentButton()
     }
     
     func touchUPCurrentButton() {
