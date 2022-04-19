@@ -46,13 +46,14 @@
 
 ## 1. MVVM-C 패턴 적용 
 
-+ `Coordinator` 에서 화면 전환 및, `ViewController & ViewModel`을 생성하므로 `ViewController`가 `SRP`을 준수할수 있도록 하였습니다.
-+ `MVVM-C` 패턴의 장점중 하나인 의존성 주입을 통한 `ViewModel`을 손쉽게 교체 및 `UI와 별개된 테스트`가 가능합니다.
++ `Coordinator` 에서 화면 전환을 수행하여 `ViewController`가 `SRP`을 준수할수 있도록하였습니다.
++ `Clean Architecure`을 적용하여 `Presentation Layer` 와 `DomainLayer`가 독립적이기에 테스트하기 용이하며, 재사용 및 교체하기 편하도록 하였습니다.
+
 &nbsp;
 
 
 ## 2. 10-200룰 적용
-+ 제가 생각하는 코드의 중요한점인 `SRP`을 지키기 위해 `MVVM-C` 패턴 적용 및 `10 - 200룰` 을 적용하였습니다.
++ 제가 생각하는 코드의 중요한점인 `SRP`을 지키기 위해 `10 - 200룰` 을 적용하였습니다.
 
 &nbsp;
     
